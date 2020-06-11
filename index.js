@@ -39,7 +39,7 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 console.log(burger.discount("teacher"));
-console.log(burger.discount("student"));
+console.log(burger.discount("public"));
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -58,7 +58,7 @@ const reviews = [{ name: "Daniela", rating: 5, feedback: "Beautiful atmosphere a
 console.log(reviews[5].feedback);
 
 /* Task 5: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
-let myReview = { name: "Richard", rating: 3, feedback: "Test" }
+reviews.push({ name: "Richard", rating: 3, feedback: "Test" })
 
 /* Task 6: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
 reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
