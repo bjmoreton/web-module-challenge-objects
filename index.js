@@ -5,6 +5,7 @@ const burger = {
   name: "Burger", price: 18, category: "Lunch", discount: function (type) {
     switch (type) {
       case "teacher":
+      case "student":
         return this.price - (this.price * .25);
       default:
         return this.price - (this.price * .10);
@@ -15,11 +16,11 @@ const breakfastBurrito = { name: "Breakfast Burrito", price: 16, category: "Brea
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
-function createMenuItem(name, cost, category) {
+function createMenuItem(name, price, category) {
   return {
-    name: name,
-    price: cost,
-    category: category,
+    name,
+    price,
+    category,
   };
 }
 
@@ -175,11 +176,12 @@ function carMaker(odometer) {
   return {
     odometer: odometer,
     drive: function (distance) {
+      console.log(`Driving ${distance} miles.`);
       this.odometer += distance;
+      return this.odometer;
     }
   }
 }
 
 const car = carMaker(2000);
-car.drive(200);
-console.log(car.odometer);
+console.log(`Odometer: ${car.drive(200)} miles.`);
